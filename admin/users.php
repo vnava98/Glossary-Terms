@@ -18,14 +18,14 @@ $view_bag = [
 
 
 // TODO: Display list of all users currently in the database
-    if (isset($_GET['search'])) {
-        $items = Data::search_users($_GET['search']);
+if (isset($_GET['search'])) {
+    $items = Data::search_users($_GET['search']);
 
-        $view_bag['heading'] = 'Search Results for ' . $_GET['search'];
-    } else {
-        $items = Data::get_users();
-    }
+    $view_bag['heading'] = 'Search Results for ' . $_GET['search'];
+} else {
+    $items = Data::get_users();
+}
 
-    view(
-        name:'admin/users', 
-        model: $items);
+view(
+    name:'admin/users', 
+    model: $items);

@@ -10,7 +10,7 @@ $view_bag = [
   'home' => 'Home'
 ];
 
-// ensure_admin_is_authenticated();
+// if not admin then go to index.php
 if (!isset($_SESSION['admin'])) {
   redirect('../index.php');
 }
